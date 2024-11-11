@@ -19,7 +19,7 @@ const LoginPage = () => {
 
   const login = async (email: string, password: string) => {
     try {
-      const session = await account.createEmailPasswordSession(email, password);
+      await account.createEmailPasswordSession(email, password);
     setLoggedInUser(await account.get());
     setEmail("")
     setPassword("")
